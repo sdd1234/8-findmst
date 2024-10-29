@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #define MAX_VERTICES 100
 #define INF 1000
-int parent[MAX_VERTICES];	//부모노드 저장
+int parent[MAX_VERTICES];	//부모노드 저장 
+
 
 struct Edge {
     int start, end, weight;
