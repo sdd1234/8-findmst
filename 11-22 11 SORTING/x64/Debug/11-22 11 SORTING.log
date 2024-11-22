@@ -1,0 +1,3 @@
+﻿  main.c
+C:\Users\김지훈\Desktop\11-22 11 SORTING\11-22 11 SORTING\main.c(23,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  11-22 11 SORTING.vcxproj -> C:\Users\김지훈\Desktop\11-22 11 SORTING\x64\Debug\11-22 11 SORTING.exe
