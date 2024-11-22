@@ -5,19 +5,19 @@
 int Insert_comapare = 0;
 int bouble_move=0;
 
-void print_list(int data[], int size) { //ÇÁ¸°Æ®ÇÔ¼ö
+void print_list(int data[], int size) { //í”„ë¦°íŠ¸í•¨ìˆ˜
 	for (int i = 0; i < size; i++) {
 		printf("%d ", data[i]);
 	}
 }
 
-void generateRandomData(int data[]) { //·£´ı°ª »ı¼ºÇÔ¼ö (0-999)
+void generateRandomData(int data[]) { //ëœë¤ê°’ ìƒì„±í•¨ìˆ˜ (0-999)
 	for (int i = 0; i < SIZE; i++) {
 		data[i]=rand() % 1000;
 	}
 }
 
-void doSelectionSort(int data[]) { // ¼±ÅÃÁ¤·Ä
+void doSelectionSort(int data[]) { // ì„ íƒì •ë ¬
 	printf("Selection Sort: ");
 	printf("\n");
 	int i, j, least, temp;
@@ -33,14 +33,14 @@ void doSelectionSort(int data[]) { // ¼±ÅÃÁ¤·Ä
 		data[least] = temp;
 		if (i + 1 == 10 || i + 1 == 30
 			|| i + 1 == 50 || i + 1 == 70
-			|| i + 1 == 90 || i + 1 == 100) {
+			|| i + 1 == 90 ) {
 			printf("step %d: ", i + 1);
 			print_list(data, SIZE);
 			printf("\n");
 			printf("\n");
 		}
 	}
-	// 100¹øÂ° ´Ü°è¿¡¼­ Ãâ·Â
+	// 100ë²ˆì§¸ ë‹¨ê³„ì—ì„œ ì¶œë ¥
 	if (SIZE == 100) {
 		printf("step 99: ");
 		print_list(data, SIZE);
@@ -48,7 +48,7 @@ void doSelectionSort(int data[]) { // ¼±ÅÃÁ¤·Ä
 		printf("\n");
 	}
 }
-void insertion_sort(int list[]) { //»ğÀÔÁ¤·Ä
+void insertion_sort(int list[]) { //ì‚½ì…ì •ë ¬
 	int i, j, key;
 	for (i = 1; i < SIZE; i++) {
 		key = list[i];
@@ -59,7 +59,7 @@ void insertion_sort(int list[]) { //»ğÀÔÁ¤·Ä
 		list[j + 1] = key;
 	}
 }
-void doInsertionSort(int data[]) {//»ğÀÔÁ¤·Ä È£Ãâ 
+void doInsertionSort(int data[]) {//ì‚½ì…ì •ë ¬ í˜¸ì¶œ 
 	for (int i = 0; i < 20; i++) {
 		generateRandomData(data);
 		insertion_sort(data);
@@ -74,14 +74,14 @@ void doInsertionSort(int data[]) {//»ğÀÔÁ¤·Ä È£Ãâ
 		
 }
 
-void BubbleSort(int data[]) {//¹öºíÁ¤·Ä
+void BubbleSort(int data[]) {//ë²„ë¸”ì •ë ¬
 	int temp;
-	int flag; //Á¤·Ä ¿©ºÎ¸¦ ¾Ë±âÀ§ÇÑ ÇÃ·¡±×
+	int flag; //ì •ë ¬ ì—¬ë¶€ë¥¼ ì•Œê¸°ìœ„í•œ í”Œë˜ê·¸
 		for (int i = SIZE - 1; i > 0; i--) {
 			flag = 0;
 			for (int j = 0; j < i; j++) {
 				if (data[j] > data[j + 1]) {
-					bouble_move+=3; //ÀÌµ¿È½¼ö´Â 3¹øÁõ°¡ÇØ¾ßÇÔ
+					bouble_move+=3; //ì´ë™íšŸìˆ˜ëŠ” 3ë²ˆì¦ê°€í•´ì•¼í•¨
 					temp = data[j];
 					data[j] = data[j + 1];
 					data[j+1] = temp;
@@ -92,7 +92,7 @@ void BubbleSort(int data[]) {//¹öºíÁ¤·Ä
 		}
 	}
 
-void doBubbleSort(int data[]) { //20¹øÈ£Ãâ
+void doBubbleSort(int data[]) { //20ë²ˆí˜¸ì¶œ
 	for (int i = 0; i < 20; i++) {
 		generateRandomData(data);
 			BubbleSort(data);
