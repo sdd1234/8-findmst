@@ -10,20 +10,20 @@ int  totalCompares = 0;
 int  totalDataMoves = 0;
 int save[SIZE];
 
-void generateRandomData(int data[]) { //·£´ı°ª »ı¼ºÇÔ¼ö (0-999)
+void generateRandomData(int data[]) { //ëœë¤ê°’ ìƒì„±í•¨ìˆ˜ (0-999)
     for (int i = 0; i < SIZE; i++) {
         data[i] = rand() % 1000;
     }
 }
 
-void printArray(int list[], int size) {//Ãâ·Â
+void printArray(int list[], int size) {//ì¶œë ¥
     for (int i = 0; i < size; i++) {
         printf("%3d ", list[i]);
     }
     printf("\n");
 }
 
-void merge(int list[], int left, int mid, int right) {//ÇÕº´Á¤·ÄÇÔ¼ö
+void merge(int list[], int left, int mid, int right) {//í•©ë³‘ì •ë ¬í•¨ìˆ˜
     int i, j, k, l;
     i = left; 
     j = mid + 1; 
@@ -71,7 +71,7 @@ void merge(int list[], int left, int mid, int right) {//ÇÕº´Á¤·ÄÇÔ¼ö
     }
 }
 
-void doMergeSort(int list[], int n) {//³»ºÎÇÔ¼ö(¹İº¹)
+void doMergeSort(int list[], int n) {//ë‚´ë¶€í•¨ìˆ˜(ë°˜ë³µ)
     int curr_size;  
     int left_start; 
     for (curr_size = 1; curr_size <= n - 1; curr_size = 2 * curr_size) {
@@ -108,8 +108,8 @@ int main() {
         totalCompares += comparisonCount;
         totalDataMoves += moveCount;
     }
-    printf("\nAverage Comparisons: %.2f\n", totalCompares / 20.0);
-    printf("Average Moves: %.2f\n", totalDataMoves / 20.0);
+  printf("\nAverage Comparisons: %.2f\n", (float)totalCompares / 20.0);
+  printf("Average Moves: %.2f\n", (float)totalDataMoves / 20.0);
 
     return 0;
 }
